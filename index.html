@@ -72,6 +72,24 @@
       flex: 1 1 calc(50% - 1rem);
     }
 
+    .trip-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .images {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .trip-img {
+      width: 80px;
+      height: auto;
+      border-radius: 8px;
+    }
+
     a {
       color: var(--accent);
     }
@@ -123,9 +141,38 @@
   <section id="trips">
     <h2>Trips</h2>
     <div class="grid">
-      <div class="card">📍 Italy </div>
-      <div class="card">📍 Spain </div>
-      <div class="card">📍 Japan </div>
+      <div class="card">
+        <div class="trip-item">
+          <span>📍 Italy</span>
+          <div class="images">
+            <img src="images/Italy1.jpg.jpg" alt="Italy1" class="trip-img">
+            <img src="images/Italy2.jpg.jpg" alt="Italy2" class="trip-img">
+            <img src="images/Italy3.jpg.jpg" alt="Italy3" class="trip-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="trip-item">
+          <span>📍 Spain</span>
+          <div class="images">
+            <img src="images/Spain1.jpg.jpg" alt="Spain1" class="trip-img">
+            <img src="images/Spain2.jpg.jpg" alt="Spain2" class="trip-img">
+            <img src="images/Spain3.jpg.jpg" alt="Spain3" class="trip-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="trip-item">
+          <span>📍 Japan</span>
+          <div class="images">
+            <img src="images/Japan1.jpg.jpg" alt="Japan1" class="trip-img">
+            <img src="images/Japan2.jpg.jpg" alt="Japan2" class="trip-img">
+            <img src="images/Japan3.jpg.jpg" alt="Japan3" class="trip-img">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
