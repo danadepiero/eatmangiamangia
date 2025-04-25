@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Food Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fffaf3;
+      --accent: #d94f30;
+      --olive: #708238;
+      --text: #333;
+    }
+
+    body {
+      font-family: 'Lora', serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--olive);
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      flex: 1 1 calc(50% - 1rem);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: #f5f5f5;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        flex-direction: column;
+      }
+
+      .card {
+        flex: 1 1 100%;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>@yourfoodhandle</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#trips">Trips</a>
+      <a href="#other">Other</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I’m an aspiring food critic sharing the food I eat in the places I visit, and the some dishes I cook. Follow along for mouth-watering food pics, recipes, and reccomendations</p>
+  </section>
+
+  <section id="trips">
+    <h2>Trips</h2>
+    <div class="grid">
+      <div class="card">📍 Italy </div>
+      <div class="card">📍 Spain </div>
+      <div class="card">📍 Japan </div>
+    </div>
+  </section>
+
+  <section id="other">
+    <h2>Other</h2>
+    <p>Sometimes I write about kitchen gear, flavor experiments, or whatever else I’m craving. Stay tuned!</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 drdepiero@gmail.com</p>
+    <p>📸 <a href="https://instagram.com/mangiamanguamangia" target="_blank">Instagram</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 @mangiamangiamangia</p>
+  </footer>
+</body>
+</html>
