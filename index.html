@@ -58,17 +58,12 @@
       font-weight: 600;
     }
 
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
     .card {
       background: transparent;
       padding: 0.5rem 0;
       border: none;
-      flex: 1 1 calc(50% - 1rem);
+      width: 100%; /* full width */
+      margin-bottom: 2rem; /* spacing between sections */
     }
 
     .trip-item {
@@ -81,12 +76,14 @@
     .images {
       display: flex;
       gap: 0.5rem;
+      flex-wrap: wrap; /* wrap images on small screens */
     }
 
     .trip-img {
-      width: 40%;
-      height: auto;
-      border-radius: 0;
+      width: 30%;
+      height: 180px;        /* fixed height */
+      object-fit: cover;    /* crop to fill without distortion */
+      border-radius: 0;     /* sharp edges */
     }
 
     a {
@@ -102,14 +99,6 @@
     }
 
     @media (max-width: 600px) {
-      .grid {
-        flex-direction: column;
-      }
-
-      .card {
-        flex: 1 1 100%;
-      }
-
       header {
         flex-direction: column;
         align-items: flex-start;
@@ -120,7 +109,9 @@
       }
 
       .trip-img {
-        width: 100%;
+        width: 100%;       /* full width on mobile */
+        height: auto;      /* auto height for better responsiveness */
+        object-fit: cover;
       }
     }
   </style>
@@ -151,37 +142,36 @@
 
   <section id="trips">
     <h2>Places of Mangia Mangia Mangia</h2>
-    <div class="grid">
-      <div class="card">
-        <div class="trip-item">
-          <span>📍 Italy</span>
-          <div class="images">
-            <img src="images/Italy1.jpg.jpg" alt="Italy1" class="trip-img">
-            <img src="images/Italy2.jpg.jpg" alt="Italy2" class="trip-img">
-            <img src="images/Italy3.jpg.jpg" alt="Italy3" class="trip-img">
-          </div>
+
+    <div class="card">
+      <div class="trip-item">
+        <span>📍 Italy</span>
+        <div class="images">
+          <img src="images/Italy1.jpg.jpg" alt="Italy1" class="trip-img" />
+          <img src="images/Italy2.jpg.jpg" alt="Italy2" class="trip-img" />
+          <img src="images/Italy3.jpg.jpg" alt="Italy3" class="trip-img" />
         </div>
       </div>
+    </div>
 
-      <div class="card">
-        <div class="trip-item">
-          <span>📍 Spain</span>
-          <div class="images">
-            <img src="images/Spain1.jpg.jpg" alt="Spain1" class="trip-img">
-            <img src="images/Spain2.jpg.jpg" alt="Spain2" class="trip-img">
-            <img src="images/Spain3.jpg.jpg" alt="Spain3" class="trip-img">
-          </div>
+    <div class="card">
+      <div class="trip-item">
+        <span>📍 Spain</span>
+        <div class="images">
+          <img src="images/Spain1.jpg.jpg" alt="Spain1" class="trip-img" />
+          <img src="images/Spain2.jpg.jpg" alt="Spain2" class="trip-img" />
+          <img src="images/Spain3.jpg.jpg" alt="Spain3" class="trip-img" />
         </div>
       </div>
+    </div>
 
-      <div class="card">
-        <div class="trip-item">
-          <span>📍 Japan</span>
-          <div class="images">
-            <img src="images/Japan1.jpg.jpg" alt="Japan1" class="trip-img">
-            <img src="images/Japan2.jpg.jpg" alt="Japan2" class="trip-img">
-            <img src="images/Japan3.jpg.jpg" alt="Japan3" class="trip-img">
-          </div>
+    <div class="card">
+      <div class="trip-item">
+        <span>📍 Japan</span>
+        <div class="images">
+          <img src="images/Japan1.jpg.jpg" alt="Japan1" class="trip-img" />
+          <img src="images/Japan2.jpg.jpg" alt="Japan2" class="trip-img" />
+          <img src="images/Japan3.jpg.jpg" alt="Japan3" class="trip-img" />
         </div>
       </div>
     </div>
