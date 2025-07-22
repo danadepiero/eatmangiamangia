@@ -9,7 +9,7 @@
   <style>
     :root {
       --bg: #fffaf3;
-      --accent: tomato;  /* changed to tomato red */
+      --accent: tomato; /* changed to tomato red */
       --olive: #708238;
       --text: #333;
     }
@@ -33,4 +33,168 @@
 
     header h1 {
       margin: 0;
-      font-size:
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .card {
+      background: transparent;
+      padding: 0.5rem 0;
+      border: none;
+      flex: 1 1 calc(50% - 1rem);
+    }
+
+    .trip-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .images {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .trip-img {
+      width: 40%;
+      height: auto;
+      border-radius: 0;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: #f5f5f5;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        flex-direction: column;
+      }
+
+      .card {
+        flex: 1 1 100%;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .trip-img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>@mangiamangiamangia</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#trips">Trips</a>
+      <a href="#other">Other</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Welcome to Mangia Mangia Mangia!</h2>
+    <p>Hi! I’m an aspiring food critic sharing the food I eat in the places I visit, as well as the dishes I cook. Follow along for food album guides, notebooks and postcards all focused on my favorite food pics!</p>
+    <p>I share food I eat and food I make, which includes new flavors, kitchen experiments, or whatever else I’m craving. Stay tuned!</p>
+  </section>
+
+  <section id="other">
+    <h2>Shop</h2>
+    <p>Food Album Guides</p>
+    <p>Notebooks</p>
+    <p>Postcards</p>
+  </section>
+
+  <section id="trips">
+    <h2>Places of Mangia Mangia Mangia</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="trip-item">
+          <span>📍 Italy</span>
+          <div class="images">
+            <img src="images/Italy1.jpg.jpg" alt="Italy1" class="trip-img">
+            <img src="images/Italy2.jpg.jpg" alt="Italy2" class="trip-img">
+            <img src="images/Italy3.jpg.jpg" alt="Italy3" class="trip-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="trip-item">
+          <span>📍 Spain</span>
+          <div class="images">
+            <img src="images/Spain1.jpg.jpg" alt="Spain1" class="trip-img">
+            <img src="images/Spain2.jpg.jpg" alt="Spain2" class="trip-img">
+            <img src="images/Spain3.jpg.jpg" alt="Spain3" class="trip-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="trip-item">
+          <span>📍 Japan</span>
+          <div class="images">
+            <img src="images/Japan1.jpg.jpg" alt="Japan1" class="trip-img">
+            <img src="images/Japan2.jpg.jpg" alt="Japan2" class="trip-img">
+            <img src="images/Japan3.jpg.jpg" alt="Japan3" class="trip-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 dr.danyyyy@gmail.com</p>
+    <p>📸 <a href="https://instagram.com/mangiamangiamangia" target="_blank">Instagram</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 @mangiamangiamangia</p>
+  </footer>
+</body>
+</html>
